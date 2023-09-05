@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- HEADER ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1920px;
+}
+
+/* Background */
+.headerClass {
+    align-items: center;
+    background-image: url('../img/ceni-jpg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Separator Boos */
+.containerFather {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    width: 90%;
+    z-index: 1;
+}
+
+.top {
+    justify-content: space-between;
+}
+
+/* Text banner */
+.text_header {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.text_header h1 {
+    color: #a5d4cc;
+    font-size: 100px;
+    text-shadow: 1px 1px 7px #185a4f;
+}
+
+.text_header h2 {
+    color: #a5d4cc;
+    text-align: right;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    margin-top: 90px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.dividerMenu {
+    height: 185px;
+    width: 2px;
+    background-color: #ff0000;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 7px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu a {
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 1px 1px 7px #000000;
+    padding-right: 12px;
+}
+
+.menu li:hover {
+	color: #a5d4cc;
+	background-color: transparent;
+}
+
+.menu li:hover:before {
+    left: auto;
+	right: 0%;
+	width: 170px;
+}
+
+.menu li:before {
+    background: #ffffff;
+    content: '';
+	display: block;
+    height: 100%;
+	position: absolute;
+	right: 0px;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+	width: 0px;
+	z-index: -1;
+}
+
+/* Header transition */
+.transition {
+    background-image: linear-gradient(rgba(38,110,118, 0),  rgba(19,44,53, .8), rgba(19,44,53, 1));
+    height: 200px;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    max-width: 1920px;
+}
+
+/* ---------- MAIN ---------- */
+
+.bodySite {
+    background-color: rgb(19,44,53);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Biography section */
+
+.biography {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    width: 80%;
+}
+
+.sectionTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icons {
+    color: #a5d4cc;
+    text-shadow: 2px 2px 5px #6e4926;
+    font-size: 80px !important;
+    margin: auto;
+}
+
+.sectionTitle h3 {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sectionTitle h3::after {
+    content:"";
+    background-color: #ffffff;
+    height: 2px;
+    margin: auto;
+    width: 60%;
+}
+
+.biographyBody {
+    align-items: center;
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-between;
+}
+
+.biographyText {
+    color: #a5d4cc;
+    text-shadow: 2px 2px 5px #6e4926;
+    font-size: 1.2em /* clamp(.8em, .8em + 1vw, 1.2em) */;
+    text-align: justify;
+    flex: 3;
+    margin-right: 20px;
+    display: -webkit-box;
+    overflow: auto;
+    padding-right: 10px;
+    -webkit-line-clamp: 20;
+    -webkit-box-orient: vertical;
+}
+
+.biographyText p::first-letter {
+    font-size: 1.5em;
+    padding-left: 3%;
+}
+
+.biographyText::-webkit-scrollbar {
+    width: 5px;
+}
+
+.biographyText::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.biographyText::-webkit-scrollbar-thumb {
+    background-color: #3a667b;
+    border-radius: 20px;
+}
+
+.biographyImg, 
+.biographyImg img {
+    flex: 1;
+    width: 250px;
+}
+
+/* Titles section */
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 110px;
+    width: 80%;
+}
+
+.backgroundAlternative {
+    background-color: #3e6d81;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.titlesBody {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.colorAlternative {
+    color: #132c35;
+}
+
+.titlesBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.titlesBody h3 {
+    color: #000000;
+}
+
+.titlesText {
+    color: #132c35;
+    margin-top: 40px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.titlesText h3 {
+    margin-bottom: 20px;
+}
+
+.titlesImg img {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* Deeds section */
+
+.deeds {
+    margin-top: 90px;
+    width: 80%;
+}
+
+.deeds h3 {
+    margin-top: 10px;
+}
+
+.deedsBody {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.deedsBody section {
+    display: flex;
+    width: 43%;
+    padding: 0px 20px 40px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.deedsBody h3 {
+    padding: 20px 0;
+}
+
+.deedsImg {
+    display: flex;
+    justify-content: center;
+;
+}
+
+.deedsImg img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.deedsDescription {
+    font-size: 1em;
+    text-align: justify;
+    color: #132c35;
+}
+
+.deedsDescription p::first-letter {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 4%;
+}
+
+.deedsTable {
+    width: 100%;
+}
+
+.deedsBody ul {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #132c35;
+}
+
+.deedsButton {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.deedsBody button {
+    margin-top: 30px;
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: #132c35;
+    border-radius: 5px;
+    border: 1px solid #132c35;
+}
+
+.deedsBody button:hover {
+    background-color: #3c9091;
+    color: #132c35;
+}
+
+/* Cronology section */
+
+.cronology {
+    margin-top: 90px;
+    width: 80%;
+}
+
+.cronologyBody {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.cronologyBody table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cronologyBody th {
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: #dadada;
+    color: #6e4926;
+}
+
+.cronologyBody th,
+.cronologyBody td {
+    border: 1px solid #ffffff;
+}
+
+.cronologyBody td { 
+    padding: 5px;
+    color: #ffffff;
+}
+
+.cronologyBody tr:nth-child(odd) {
+    background-color: #5a3f0c;
+}
+
+.cronologyBody tr:nth-child(even) {
+    background-color: #886016;
+}
+
+.cronologyBody tr:hover {
+    background-color: #bd7e0b;
+}
+
+/* ---------- HEADER ---------- */
+
+footer {
+    background-color: #000000;
+}
+
+.footerFather {
+    width: 80%;
+    display: flex;
+    margin-top: 60px;
+    color: #dadada;
+    justify-content: center;
+}
+
+.credits,
+.ceni {
+    flex: 1;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.credits h4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footerFather img {
+    width: 200px;
+}
+
+.lovecraft {
+    align-items: center;
+    font-size: .8em;
+    margin-right: 60px;
+}
+
+.lovecraft p {
+    margin: 10px 0;
+    color: #3e910e;
+}
+
+.itemsFooter {
+    text-align: justify;
+}
+
+.itemsFooter ul {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.itemsFooter a {
+    color: #3e910e;
+    text-decoration: none;
+}
+
+.separatorFooter {
+    height: 1px;
+    width: 100%;
+    background-color: #dadada;
+    display: block;
+}
+
+.copywriting {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.copywritingFather  {
+    margin-top: 30px;
+    color: #3e6d81;
+}
+
+.textFooter {
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+    font-size: .7em;
+    justify-content: space-between;
+}
+
+.textFooter span {
+    color: darkgray;
+}
+
+.textFooter a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+@media (min-width: 1920px)  {
+    body {
+        margin: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .biographyText {
+        font-size: .9em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .text_header h1 {
+        font-size: 90px;
+    }
+
+    .biographyText {
+        font-size: .8em;
+        -webkit-line-clamp: 30;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .top {
+        flex-direction: column-reverse;
+    }
+
+    .text_header h1 {
+        font-size: 50px;
+    }
+
+    .text_header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_header h2 {
+        font-size: 15px;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    .biographyBody {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .biographyImg {
+        align-items: center;
+    }
+
+    .biographyImg img {
+        width: 150px;
+        margin: auto;
+        display: flex;
+    }
+
+    .biographyText {
+        display: flex;
+        margin: auto;
+        padding: 0;
+    }
+
+    .icons {
+        font-size: 40px !important;
+    }
+
+    .sectionTitle h3 {
+        font-size: 25px;
+    }
+
+    .deedsBody section {
+        width: 450px;
+    }
+
+    .deedsDescription {
+        font-size: .8em;
+    }
+
+    .influenceText {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .deedsBody h3 {
+        text-align: center;
+    }
+
+    .deedsTable {
+        font-size: .8em;
+    }
+
+    .cronologyBody {
+        font-size: .7em;
+    }
+
+    .footerFather {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .credits,
+    .lovecraft {
+        width: 80%;
+        margin: 0;
+    }
+
+    .credits {
+        margin-top: 40px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
